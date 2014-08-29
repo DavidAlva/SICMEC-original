@@ -1,0 +1,49 @@
+/*************************************************************/
+/*   Dise�:   Jajajeje									                     */
+/*   Archivo:  Formularios                                  */
+/*-----------------------------------------------------------*/
+/*   Autor:    jajeje                                        */
+/*   Dia:      19 Febrero 2008                               */
+/*   Pagina:   http:\\jajajeje.googlepages.com               */
+/*-----------------------------------------------------------*/
+/*************************************************************/
+/*Texto de error o exito*/
+p.error {text-align:center; color:#ff0000; background:#ffcccc; border:solid 1px #ff0000; font-weight:bold;}
+p.ok {text-align:center; color:#000000; background:#ffcc00; border:solid 1px #ff9900; font-weight:bold;}
+/*	LOGIN */
+.loginform {width:160px; margin:0 auto;}
+.loginform p {clear:both; margin:0; padding:0;}
+.loginform fieldset {width:160px; border:none;}
+.loginform label.top {float:left; width:125px; margin:0 0 2px 0; font-size:110%;}
+.loginform label.right {float:left; width:125px; margin:5px 0 0 0; padding:0 0 0 3px; /*IE6*/; font-size:110%;}
+.loginform input.field {width:158px; margin:0 0 5px 0; padding:0.1em 0 0.2em 0 !important /*Non-IE6*/; padding:0.2em 0 0.3em 0 /*IE6*/; border:solid 1px rgb(200,200,200); font-family:verdana,arial,sans-serif; font-size:110%;}
+.loginform input.checkbox {float:left; margin:5px 0 0 0 !important /*Non-IE6*/; margin:2px 0 0 -3px /*IE6*/; border:none;}
+.loginform input.button {float:left; width:5.0em; margin:10px auto 5px auto; padding:1px; background:rgb(230,230,230); border:solid 1px rgb(150,150,150); text-align:center; font-family:verdana,arial,sans-serif; color:rgb(150,150,150); font-size:110%;}
+.loginform input.button:hover {cursor:pointer; border:solid 1px rgb(80,80,80); background:rgb(220,220,220); color:rgb(80,80,80);}
+.loginform p.error {text-align:center; color:#ff0000; background:#ffcccc; border:solid 1px #ff0000; font-weight:bold;}
+/* TABLAS ******************************************************************************************/
+.tabla table {clear:both; width:auto; margin:2.0em 0 0.2em 0; table-layout: fixed; border-collapse:collapse; empty-cells:show; background-color:#ffffff;}
+.tabla table th {height:3.5em; padding:0 7px 0 7px; empty-cells:show; background-color: #FFC81E; text-align:left; color:rgb(255,255,255); font-weight:bold; font-size:110%; border:solid 2px rgb(255,255,255);}
+.tabla table td {height:3.0em; padding:2px 7px 2px 7px; border-left:solid 2px rgb(255,255,255); border-right:solid 2px rgb(255,255,255); border-top:solid 2px rgb(255,255,255); border-bottom:solid 2px rgb(255,255,255); text-align:left; font-weight:normal; color:rgb(80,80,80); font-size:110%;}
+.tabla tr.alt
+        {
+        background: #FFF5A7;
+        color: #797268;
+        }
+.tabla tbody tr.alt:hover, tbody tr:hover
+				{
+				background:#FFE046;
+				}
+p.caption {clear:both; margin:0.5em 0 2.0em 20px; text-align:left; color:rgb(80,80,80); font-size:110%;}
+/*******************************************************************************************/
+/* CONTACTO */
+.formulario {width:auto; margin:2.0em auto 0 auto; padding:10px 10px 40px 10px; border:solid 1px rgb(200,200,200); background-color:rgb(240,240,240);}
+.formulario fieldset {padding:20px 0 0 0 !important /*No-IE6*/; padding:0 /*IE6*/; margin:0 0 20px 0; border:solid 1px rgb(220,220,220);}
+.formulario fieldset legend {margin:0 0 0 5px !important /*No-IE*/; margin:0 0 20px 5px /*IE6*/; padding:0 2px 0 2px; color:rgb(80,80,80); font-weight:bold; font-size:130%;}
+.formulario label.left {float:left; margin:0 0 0 10px; padding:2px; font-size:110%;}
+.formulario label.leftW {width:140px; float:left; margin:0 0 0 10px; padding:2px; font-size:110%;}
+.formulario select.combo {width:175px; padding:2px; border:solid 1px rgb(200,200,200); font-family:verdana,arial,sans-serif; font-size:110%;}
+.formulario input.field {width:275px; padding:2px; border:solid 1px rgb(200,200,200); font-family:verdana,arial,sans-serif; font-size:110%;}
+.formulario textarea {width:275px; padding:2px; border:solid 1px rgb(200,200,200); font-family:verdana,arial,sans-serif; font-size:110%;}
+.formulario input.button {float:right; width:9.0em; margin-top:10px; margin-right:20px; padding:1px !important /*No-IE6*/; padding:0 /*IE6*/; background:rgb(230,230,230); border:solid 1px rgb(150,150,150); text-align:center; font-family:verdana,arial,sans-serif; color:rgb(150,150,150); font-size:110%;}
+.formulario input.button:hover {cursor: pointer; border:solid 1px rgb(80,80,80); background:rgb(220,220,220); color:rgb(80,80,80);}

@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<!--  Version: 1.0            		 					 																			-->
+<!--  Dia:     10 Enero, 2007                           -->
+<!--  Autor:   jajajeje                                   -->
+
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="expires" content="3600" />
+  <meta name="revisit-after" content="2 days" />
+  <meta name="robots" content="index,follow" />
+  <meta name="publisher" content="Jajajeje" />
+  <meta name="copyright" content="Mayasoft" />
+  <meta name="author" content="Diseñada por jajajeje" />
+  <meta name="distribution" content="global" />
+  <meta name="description" content="Control de Hardware y Software" />
+  <!-- <script type="text/javascript" src="js/jQueryCompress.js"></script>
+	<script type="text/javascript" src="js/thickbox.js"></script> 
+	<link rel="StyleSheet" type="text/css" media="screen" href="css/Thickbox.css" /> -->
+  <link rel="stylesheet" type="text/css" media="screen,projection" href="css/present.css" />
+  <link rel="stylesheet" type="text/css" media="screen,projection,print" href="css/text.css" />
+  <link rel="icon" type="image/x-icon" href="imagenes/favicon.ico" />
+  <title>Prueba Web 2.0</title>
+  
+</head>
+<body>
+<div id="page-container">
+	<div class="header">
+		<h1>Hardware</h1>
+		<h2>Alta</h2>
+	</div>
+	<div class="main">
+		<div class="main-content">
+			<h2>Seleccione la Opci&oacute;n Deseada</h2>
+			<div class="column1-unit">
+				<ul>
+					<LI><a href="modificar.html">Modificar</a></LI>
+					<li><a href="baja.html">Baja</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

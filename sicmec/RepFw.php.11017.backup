@@ -1,0 +1,40 @@
+<?php
+ // SE REALIZA LA CONEXION CON LA BASE DE DATOS
+ require_once('Connections/SICMEC.php'); 
+ include ("seguridad.php");
+ session_start(); 
+if ($_SESSION["CveGrupo"] != 2) { 
+    header("Location: Index.html"); 
+    exit(); }
+?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<HEAD><TITLE>Reporte de firewall instalado</TITLE></HEAD>
+<BODY>
+<H1>Reporte de la instalaci&oacute;n del Firewall</H1>
+<?php
+	mysql_select_db($database_SICMEC, $SICMEC);
+	$nompza = mysql_query("SELECT Descripcion FROM adscripcion WHERE CveAdscrip = '" . $_SESSION["pzaid"] . "'",$SICMEC);
+?>
+<P>Plaza <B><?php echo $_SESSION["pzaid"] . " " . $nompza; ?></B></P>
+<P>FireWall <B><?php echo $_SESSION["serieFw"]; ?></B></P>
+<P>Ip Lan 1 <B><?php echo $_SESSION['iplan1'] . " </B> Mascara <B>" . $_SESSION['mask1'] . "</B> Gateway <B>" . $_SESSION['gat1'] . "</B> " ; ?></B></P>
+<P>Ip Lan 2 <B><?php echo $_SESSION['iplan2'] . "</B> Mascara <B>" . $_SESSION['mask2'] . "</B> Gateway <B>" . $_SESSION['gat2'] . "</B>" ; ?></B></P>
+<table border="1px">
+<tr><td><h2>No. Inventario</h2></td><td><h2>Ip</h2></td></tr>
+<?php
+	mysql_select_db($database_SICMEC, $SICMEC);
+	$query = "SELECT NumInv, CveCatalogo, AnnoAlta FROM actfijo WHERE CveAdscrip = '" . $_SESSION['pzaid'] . "' AND (CveCatalogo = 'I180000064' OR CveCatalogo = 'I180000096' OR CveCatalogo = 'I180000116' OR CveCatalogo = 'I180000156' OR CveCatalogo = 'I180000072' OR CveCatalogo = 'I180000012')";
+	$result = mysql_query($query,$SICMEC);
+	if($result){
+		$nums = mysql_num_rows($result);
+		for($i=1; $i<=$nums ; $i++){ 
+			$var = mysql_fetch_array($result);
+			echo "<tr><td>" . $var['NumInv'] . $var['CveCatalogo'] . $var['AnnoAlta'] . "<td><input name=\"" . $var['NumInv'] . $var['CveCatalogo'] . $var['AnnoAlta'] . "\" type=\"text\" value=\"" .  $_SESSION['dirIp1'] .  "\"/></td></tr>";
+		}//for
+		echo "</table>";
+	}//if result
+?>
+</table>
+</BODY>
+</html>

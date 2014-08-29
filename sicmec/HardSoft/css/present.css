@@ -1,0 +1,108 @@
+/*************************************************************/
+/*   Dise�:   Jajajeje												    */
+/*   Archivo:  Presentacion        		                      */
+/*-----------------------------------------------------------*/
+/*   Autor:    jajeje                                        */
+/*   Dia:      23 Marzo 2007                                 */
+/*   Pagina:   http:\\jajajeje.googlepages.com               */
+/*-----------------------------------------------------------*/
+/*************************************************************/
+
+/************/
+/*  GLOBAL  */
+/************/
+
+/* SIN ENCABEZADO #222d2d*/
+*{padding:0; margin:0;}
+ body {
+ 				font-size:62.5%;
+ 				background-color:rgb(255,255,255);
+ 				font-family:verdana,arial,sans-serif;
+ 			} /*Font-size: 1.0em = 10px cuando el explorador default tama� es 16px*/
+.page-container {
+				margin:0px auto;
+				margin-top:10px;
+				margin-bottom:10px; /*border:solid 1px rgb(150,150,150);*/
+				font-size:1.0em;
+				width:900px;
+}
+
+/* --- Otros encabezados --- */
+
+/* ENCABEZADO */
+.header {
+				font-family:"trebuchet ms",arial,sans-serif;
+				text-align: center;
+			}
+.header h1{
+				color:rgb(255,121,0);
+				text-align: center;
+}
+.header h2{
+				color: rgb(80,80,80);
+
+}
+/*************************************************/
+/****************** 	TABULADOR    ***************/
+/*************************************************/
+#tabs {
+			margin:0px auto;
+      float:left;
+      width:100%;
+	  /*background:#F9F7F3;*/
+      font-size:93%;
+      line-height:normal;
+	  	border-bottom:1px solid #C2BDAE;
+}
+#tabs ul {
+	  margin:0;
+	  padding:10px 10px 0 15%;
+	  list-style:none;
+}
+#tabs li {
+      display:inline;
+      margin:0;
+      padding:0;
+}
+#tabs a {
+      float:left;
+      background:url("../imagenes/tableft11.gif") no-repeat left top;
+      margin:0;
+      padding:0 0 0 4px;
+      text-decoration:none;
+}
+#tabs a span {
+      float:left;
+      display:block;
+      background:url("../imagenes/tabright11.gif") no-repeat right top;
+      padding:5px 15px 4px 6px;
+      color:#9F9584;
+}
+ /* Comentarios / es un arreglo para esconder para IE5 en Mac \*/
+#tabs a span {float:none;}
+    /* Fin IE5-Mac hack */
+#tabs a:hover span {
+     color:#FFF;
+}
+#tabs a:hover {
+      background-position:0% -42px;
+}
+#tabs a:hover span {
+      background-position:100% -42px;
+}
+/**************************************************************/
+/****************** CONTENIDO PRINCIPAL     *******************/
+/**************************************************************/
+.column-unit {width:900px; margin-bottom:10px !important /*No-IE6*/; margin-bottom:5px /*IE6*/;}
+.column-unit-left {
+			float:left;
+			width:450px;
+			margin-bottom:10px !important /*No-IE6*/;
+			margin-bottom:5px /*IE6*/;
+}
+.column-unit-right {
+			float:right;
+			width:446px;
+			margin-bottom:10px !important /*No-IE6*/;
+			margin-bottom:5px /*IE6*/;
+}

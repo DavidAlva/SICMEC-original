@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<link rel="StyleSheet" type="text/css" media="screen,projection" href="css/present.css">
+	<link rel="StyleSheet" type="text/css" media="screen,projection" href="css/tablasort.css" />
+	<link rel="StyleSheet" type="text/css" media="screen,projection" href="css/text.css">
+	<script type="text/javascript" src="js/tablesort.js"></script>
+	<TITLE>Buscar Equipo</TITLE>
+	<script type="text/javascript" language="JavaScript" src="js/ajax.js"></script>
+	<script type="text/javascript" language="JavaScript" src="js/funGral.js"></script>
+	<script type="text/javascript" language="JavaScript">
+  <!-- //Ocultar JS
+				var contrSlide = new Object();
+			function slide(el)
+			{
+    		if(contrSlide[el] == 0) {
+        	Effect.SlideDown(el);
+        	contrSlide[el] = 1;
+    		} else {
+        	Effect.SlideUp(el);
+        	contrSlide[el] = 0;
+    		}
+			}
+
+	-->
+	</script>
+</head>
+<!-- con esta funcion ordenamos la tabla test1 con la columna 1 onload="fdTableSort.jsWrapper('test1',1);"-->
+<body>
+<div class="page-container">
+	<div class="header">
+		<h1>Hardware y Software</h1>
+		<h2>Alta</h2>
+	</div>
+	<div class="main-content">
+		<form method="post" action="" name="formEquipo" class="formulario">
+			<fieldset>
+				<div id="CapaForm">
+				<p><label for="Catalogo" class="left">Equipo:</label>
+						<select name="Catalogo" id="Catalogo" class="combo">
+										<option value="Todos">Todos</option>
+            		  	<option value="I180000012">Laptop</option>
+                    <option value="I180000064">Mac</option>
+                    <option value="I180000096">CPU</option>
+                    <option value="I180000116">Servidor</option>
+                    <option value="I180000156">Servidor SUN</option>
+                    <option value="I180000220">CPU Lanix 2005</option>
+             </select>
+        </p>
+				<p><label for="NumInv" class="left">Inventario:</label>
+						<input type="text" name="NumInv" id="NumInv" class="field" value="" size="12" maxlength="11"/>
+				</p>
+				<p><label for="Anio" class="left">A&ntilde;o:</label>
+						<select name="Anio" id="Anio" class="combo">
+							<option value="">Todos</option>
+       				<option value="85">85</option>
+              <option value="91">91</option>
+              <option value="92">92</option>
+              <option value="94">94</option>
+							<option value="96">96</option>
+              <option value="98">98</option>
+							<option value="99">99</option>
+							<option value="0">00</option>
+							<option value="1">01</option>
+							<option value="2">02</option>
+							<option value="3">03</option>
+							<option value="4">04</option>
+							<option value="5">05</option>
+							<option value="6">06</option>
+       			</select>
+				</p>
+				</div>
+				<p><input type="button" name="submit" id="submit" class="button" value="Buscar" onclick="guarda('php/TablaAct.php','Tabla')" /></p>
+			</fieldset>
+		</form>
+		<div id="tabs">
+  	<ul>
+    	<li><a href="javascript:MostrarTabs('php/MainTM.php','Formularios','MostrarTM');" title="Tarjeta Madre"><span>Tarjeta Madre</span></a></li>
+    	<li><a href="javascript:MostrarTabs('php/MainMR.php','Formularios','MostrarMR');" title="Memoria RAM"><span>Memoria RAM</span></a></li>
+    	<li><a href="javascript:MostrarTabs('php/MainHDD.php','Formularios','MostrarHDD');" title="Disco Duro"><span>Disco Duro</span></a></li>
+    	<li><a href="javascript:MostrarTabs('php/MainTR.php','Formularios','MostrarTR');" title="Tarjeta de Red"><span>Tarjeta de Red</span></a></li>
+    	<li><a href="javascript:MostrarTabs('php/MainLe.php','Formularios','MostrarLe');" title="Lectoras"><span>Lectoras</span></a></li>
+    	<li><a href="javascript:MostrarTabs('php/MainTV.php','Formularios','MostrarTV');" title="Tarjeta Video"><span>Tarjeta Video</span></a></li>
+			<li><a href="javascript:MostrarTabs('php/MainSO.php','Formularios','MostrarSO');" title="Software"><span>Software</span></a></li>
+  	</ul>
+		</div>
+	</div>
+	<div class="column-unit-left" id="Tabla">
+
+	</div>
+	<!--Componetes ******************************************* -->
+	<div class="column-unit-right" id="Formularios">
+
+	</div>
+
+</div>
+</body>
+</html>

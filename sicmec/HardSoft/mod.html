@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<link rel="StyleSheet" type="text/css" media="screen,projection" href="present.css">
+	<link rel="StyleSheet" type="text/css" media="screen,projection" href="css/tablasort.css" />
+	<link rel="StyleSheet" type="text/css" media="screen,projection" href="css/text.css">
+	<style>
+	.tablewrapper {
+		border: 4px solid #808080;
+		background: #eee;
+		-moz-border-radius: 8px;
+		margin: 10px auto;
+		padding: 10px;
+	}
+	#horario table {
+	border-collapse: collapse;
+	width: auto;
+}
+
+	</style>
+	<script type="text/javascript" src="js/tablesort.js"></script>
+	<TITLE>Buscar Equipo</TITLE>
+
+	<script src="js/lib/prototype.js" type="text/javascript"></script>
+	<script src="js/src/scriptaculous.js" type="text/javascript"></script>
+
+	<script type="text/javascript" language="JavaScript" src="js/ajax.js"></script>
+	<script type="text/javascript" language="JavaScript">
+  <!-- //Ocultar JS
+  		function cargaDoc(pagina,Formul,dat){
+						//Cargar los archivos y links a traves de xmlhttprequest para el contador
+						MostrarConsulta(pagina,Formul,dat);
+				}
+				var contrSlide = new Object();
+			function slide(el)
+			{
+    		if(contrSlide[el] == 0) {
+        	Effect.SlideDown(el);
+        	contrSlide[el] = 1;
+    		} else {
+        	Effect.SlideUp(el);
+        	contrSlide[el] = 0;
+    		}
+			}
+	-->
+	</script>
+</head>
+<!-- con esta funcion ordenamos la tabla test1 con la columna 1 onload="fdTableSort.jsWrapper('test1',1);"-->
+<body>
+<div class="page-container">
+	<div class="header">
+		<h1>Hardware y Software</h1>
+		<h2>Alta Modificacion</h2>
+	</div>
+	<div class="main-content">
+		<form method="post" action="" name="buscarE" class="formulario">
+			<fieldset>
+				<div id="CapaForm">
+				<p><label for="Catalogo" class="left">Equipo:</label>
+						<select name="Catalogo" id="Catalogo" class="combo">
+										<option value="Todos">Todos</option>
+            		  	<option value="I18000094">Pc</option>
+                    <option value="I18000095">Servidor</option>
+                    <option value="I18000096">Mac</option>
+                    <option value="I18000097">Compaq</option>
+             </select>
+        </p>
+				<p><label for="NumInv" id="NumInv" class="left">Inventario:</label>
+						<input type="text" name="NumInv" id="NumInv" class="field" value="" size="12" maxlength="11"/>
+				</p>
+				<p><label for="anno" id="anoo" class="left">A&ntilde;o:</label>
+						<select name="Catalogo" id="Catalogo" class="combo">
+       				<option value="I18000094">90</option>
+              <option value="I18000095">91</option>
+              <option value="I18000096">.</option>
+              <option value="I18000097">.</option>
+							<option value="I18000096">.</option>
+              <option value="I18000097">06</option>
+							<option value="I18000096">07</option>
+       			</select>
+				</p>
+				</div>
+				<p><input type="button" name="submit" id="submit" class="button" value="Buscar" onclick="new slide('CapaForm')" /></p>
+			</fieldset>
+		</form>
+		<div id="tabs">
+  	<ul>
+    	<li><a href="#" onclick="cargaDoc('php/TarjMad.php','Formularios','TM');" title="Tarjeta Madre"><span>Tarjeta Madre</span></a></li>
+    	<li><a href="#" onclick="cargaDoc('php/MemRam.php','Formularios','MR');" title="Memoria RAM"><span>Memoria RAM</span></a></li>
+    	<li><a href="#" onclick="cargaDoc('php/HDD.php','Formularios','HDD');" title="Disco Duro"><span>Disco Duro</span></a></li>
+    	<li><a href="#" onclick="cargaDoc('php/TarjRed.php','Formularios','TR');" title="Tarjeta de Red"><span>Tarjeta de Red</span></a></li>
+    	<li><a href="#" onclick="cargaDoc('php/Lectoras.php','Formularios','L');" title="Lectoras"><span>Lectoras</span></a></li>
+    	<li><a href="#" onclick="cargaDoc('php/TarjVid.php','Formularios','TV');" title="Tarjeta Video"><span>Tarjeta Video</span></a></li>
+			<li><a href="#" onclick="cargaDoc('php/Soft.php','Formularios','SW');" title="Software"><span>Software</span></a></li>
+  	</ul>
+		</div>
+	</div>
+	<div class="column-unit-left" id="resultado">
+		<p align="center"><a>Seleccionar:</a> <a href="#">Todo,</a> <a href="#">ninguno</a></p>
+		<table id="test1" cellpadding="0" cellspacing="0" border="0" class="rowstyle-alt colstyle-alt no-arrow sortable-onload-1">
+    <thead>
+      <tr>
+        <th></th>
+        <th class="sortable-text">N&uacute;mero de Inventario</th>
+        <th class="sortable-text">Ubicaci&oacute;n</th>
+        <th class="sortable-numeric">Status</th>
+        <th class="sortable-numeric">Algo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      	<td><form name="uno">
+      	<input type="checkbox" value="1"  id="xre" /></form></td>
+        <td>I180000064</td>
+        <td>Salamanca</td>
+        <td>37</td>
+        <td>20%</td>
+      </tr>
+      <tr class="alt">
+      	<td><input type="checkbox" value="2"/></td>
+        <td>I180000064</td>
+        <td>Dif Valle</td>
+        <td>33</td>
+
+        <td>25%</td>
+      </tr>
+      <tr>
+      	<td><input type="checkbox" value="3"/></td>
+        <td>I180000096</td>
+        <td>Celaya</td>
+        <td>18</td>
+        <td>78%</td>
+
+      </tr>
+      <tr class="alt">
+      	<td><input type="checkbox" value="4"/></td>
+        <td>I180000112</td>
+        <td>Acambaro</td>
+        <td>18</td>
+        <td>44%</td>
+      </tr>
+
+      <tr>
+      	<td><input type="checkbox" value="5"/></td>
+        <td>I180000078</td>
+        <td>Celaya</td>
+        <td>17</td>
+        <td>52%</td>
+      </tr>
+    </tbody>
+  </table>
+  	<p align="center">
+  	<input type="submit" name="ver" id="ver"  value="Registrar" />
+  	</p>
+	</div>
+	<!--Componetes ******************************************* -->
+	<div class="column-unit-right" id="Formularios">
+	<form method='get' action='' class='formulario' name='cantLe'>
+				<fieldset>
+				<legend>Lectoras</legend>
+					<p><label for='cantidad' class='left'>Cantidad</label>
+						<input type='text' maxlength='2' size='5' name='cantidad' id='cantidad'/>
+						<input type='button' name='bcantdTR' id='bcantdTR' value='>>'  class='button' onclick="cargaDoc('php/Lectoras.php','Formularios','cantLe');" />
+					</p>
+				</fieldset>
+			</form>
+	</div>
+<div class="tablewrapper">
+			<div id="horario">
+
+				<table>
+					<caption>Horario</caption>
+					<thead>
+						<tr><th></th><th>L</th><th>M</th><th>M</th><th>J</th><th>V</th><th>S</th></tr>
+					</thead>
+
+					<tbody>
+						<tr id="horario_14"><th class="time" rowspan="2">07:00</th><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr id="horario_15" class="half"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr id="horario_16"><th class="time" rowspan="2">08:00</th><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr id="horario_17" class="half"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr id="horario_18"><th class="time" rowspan="2">09:00</th><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr id="horario_19" class="half"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+						<tr id="horario_20"><th class="time" rowspan="2">10:00</th><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr id="horario_21" class="half"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr id="horario_22"><th class="time" rowspan="2">11:00</th><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr id="horario_23" class="half"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr id="horario_24"><th class="time" rowspan="2">12:00</th><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr id="horario_25" class="half"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr id="horario_26"><th class="time" rowspan="2">13:00</th><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+						<tr id="horario_27" class="half"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr id="horario_28"><th class="time" rowspan="2">14:00</th><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr id="horario_29" class="half"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr id="horario_30"><th class="time" rowspan="2">15:00</th><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr id="horario_31" class="half"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr id="horario_32"><th class="time" rowspan="2">16:00</th><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr id="horario_33" class="half"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+						<tr id="horario_34"><th class="time" rowspan="2">17:00</th><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr id="horario_35" class="half"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr id="horario_36"><th class="time" rowspan="2">18:00</th><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr id="horario_37" class="half"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr id="horario_38"><th class="time" rowspan="2">19:00</th><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr id="horario_39" class="half"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr id="horario_40"><th class="time" rowspan="2">20:00</th><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+						<tr id="horario_41" class="half"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr id="horario_42"><th class="time" rowspan="2">21:00</th><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr id="horario_43" class="half"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+</div>
+</body>
+</html>

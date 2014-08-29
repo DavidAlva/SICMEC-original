@@ -1,0 +1,71 @@
+/*************************************************************/
+/*   Disenado:   Jajajeje                                      */
+/*   Archivo:  Texto                                         */
+/*-----------------------------------------------------------*/
+/*   Autor:    Jajajeje                                      */
+/*   Dia:      23 Marzo 2007                                 */
+/*-----------------------------------------------------------*/
+/*************************************************************/
+
+/***********************/
+/*  SECCION PRINCIPAL  */
+
+.main-content h1 a {
+				color:rgb(70,122,167);
+				font-weight:normal;
+				text-decoration:none;}
+.main-content h2 {
+				clear:both;
+				margin:1.0em 0 0.5em 0;
+				font-family:"trebuchet ms",arial,sans-serif;
+				color:rgb(80,80,80);
+				font-weight:normal;
+				font-size:170%;
+				text-align:center;
+}
+.main-content ul {
+				list-style:none;
+				margin:0.5em 0 1.0em 0;
+}
+.main-content ul li {
+				margin:0 0 0.2em 2px;
+				padding:0 0 0 12px;
+				background:url(../imagenes/bg_bullet_full_1.gif) no-repeat 0 0.5em;
+				line-height:1.4em;
+				font-size:120%;
+}
+.page-container p {margin:0 0 1.0em 0; line-height:1.5em; font-size:120%;}
+
+/*********************************/
+/*********    FORMULARIOS    *****/
+/*********************************/
+.formulario {width:418px; margin:0px auto; padding:10px 10px 0 10px;}
+.formulario fieldset {padding:20px 0 0 0 !important /*No-IE6*/; padding:0 /*IE6*/; margin:0 0 20px 0; border:solid 1px rgb(220,220,220); background-color: #F3F4F5; background-image:url(../imagenes/puntahoja.gif); background-repeat: no-repeat;	background-position: right top;}
+.formulario fieldset legend {margin:0 0 0 5px !important /*No-IE*/; margin:0 0 20px 5px /*IE6*/; padding:0 2px 0 2px; color:rgb(80,80,80); font-weight:bold; font-size:130%;}
+.formulario label.left {float:left; width:100px; margin:0 0 0 10px; padding:2px; font-size:110%;}
+.formulario select.combo {width:175px; padding:2px; border:solid 1px rgb(200,200,200); font-family:verdana,arial,sans-serif; font-size:110%;}
+.formulario input.field {width:175px; padding:2px; border:solid 1px rgb(200,200,200); font-family:verdana,arial,sans-serif; font-size:110%;}
+.formulario textarea {width:275px; padding:2px; border:solid 1px rgb(200,200,200); font-family:verdana,arial,sans-serif; font-size:110%;}
+.formulario p.checkbox {color:#000000; background:#ffcc00; border:solid 1px #ff9900; font-weight:bold;font-size:110%; padding-left:10px;}
+.formulario input.button {float:right; width:9.0em; margin-right:20px; padding:1px !important /*No-IE6*/; padding:0 /*IE6*/; background:rgb(230,230,230); border:solid 1px rgb(150,150,150); text-align:center; font-family:verdana,arial,sans-serif; color:rgb(150,150,150); font-size:110%;}
+.formulario input.button:hover {cursor: pointer; border:solid 1px rgb(80,80,80); background:rgb(220,220,220); color:rgb(80,80,80);}
+.formulario p.error {text-align:center; color:#ff0000; background:#ffcccc; border:solid 1px #ff0000; font-weight:bold;}
+.formulario p.ok {text-align:center; color:#000000; background:#ffcc00; border:solid 1px #ff9900; font-weight:bold;}
+/***************************************************/
+/*************COLUMNAS *****************************/
+/***************************************************/
+.column-unit-left ul {list-style:none; margin:2.0em 0 1.0em 8.0em;}
+.column-unit-left ul li {margin:.3em 0 0.2em 2em; padding:1px 10px 1px 12px; line-height:1.4em; font-size:120%; font-weight:bold; }
+.column-unit-left ul li:hover {color:rgb(4,4,4); background-color:#F3F4F5;}
+.column-unit-left ul li:active {color:rgb(240,240,240); background-color:#949995;}
+.column-unit-left ul li a{color:rgb(80,80,80);}
+.column-unit-left ul li a:hover{text-decoration:none; color:rgb(4,4,4);}
+.column-unit-left ul li a:active{color:rgb(240,240,240); background-color:#949995;}
+
+/****************************************************/
+/************CLASES COMUNES *************************/
+/****************************************************/
+.page-container a {color:rgb(70,122,167); font-weight:bold; text-decoration:none;}
+.main-content h1 a {color:rgb(70,122,167); font-weight:normal; text-decoration:none;}
+.page-container a:hover {color:rgb(42,90,138); text-decoration:underline;}
+.page-container a:visited {color:rgb(42,90,138);}

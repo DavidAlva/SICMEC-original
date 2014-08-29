@@ -1,0 +1,38 @@
+/*************************************************************/
+/*   Dise�:   Jajajeje												    */
+/*   Archivo:  Presentacion        		                      */
+/*-----------------------------------------------------------*/
+/*   Autor:    jajeje                                        */
+/*   Dia:      23 Marzo 2007                                 */
+/*   Pagina:   http:\\jajajeje.googlepages.com               */
+/*-----------------------------------------------------------*/
+/*************************************************************/
+
+/************/
+/*  GLOBAL  */
+/************/
+
+/* SIN ENCABEZADO #222d2d*/
+*{padding:0; margin:0;}
+ body {
+ 				font-size:62.5%; 
+ 				background-color:rgb(255,255,255); 
+ 				font-family:verdana,arial,sans-serif;
+ 			} /*Font-size: 1.0em = 10px cuando el explorador default tama� es 16px*/
+.page-container {
+
+				margin:0px auto; 
+				margin-top:10px; 
+				margin-bottom:10px; /*border:solid 1px rgb(150,150,150);*/ 
+				font-size:1.0em;}
+
+/* --- Otros encabezados --- */
+
+/* ENCABEZADO */
+.header {
+				font-family:"trebuchet ms",arial,sans-serif;
+			}
+.header h1{
+				color:rgb(255,121,0);
+}
+

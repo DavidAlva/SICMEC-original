@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<link rel="StyleSheet" type="text/css" media="screen,projection" href="present.css">
+	<link rel="StyleSheet" type="text/css" media="screen,projection" href="css/tablasort.css" />
+	<link rel="StyleSheet" type="text/css" media="screen,projection" href="css/text.css">
+	<script type="text/javascript" src="js/tablesort.js"></script>
+	<TITLE>Buscar Equipo</TITLE>
+	
+	<script src="js/lib/prototype.js" type="text/javascript"></script>
+	<script src="js/src/scriptaculous.js" type="text/javascript"></script>
+
+	<script type="text/javascript" language="JavaScript" src="js/ajax.js"></script>
+	<script type="text/javascript" language="JavaScript">
+  <!-- //Ocultar JS
+  		function cargaDoc(pagina,Formul,dat){
+						//Cargar los archivos y links a traves de xmlhttprequest para el contador
+						MostrarConsulta(pagina,Formul,dat);
+				}
+				var contrSlide = new Object();
+			function slide(el)
+			{            
+    		if(contrSlide[el] == 0) {
+        	Effect.SlideDown(el);
+        	contrSlide[el] = 1;
+    		} else {
+        	Effect.SlideUp(el);
+        	contrSlide[el] = 0;
+    		}
+			}
+	-->
+	</script>
+</head>
+<!-- con esta funcion ordenamos la tabla test1 con la columna 1 onload="fdTableSort.jsWrapper('test1',1);"-->
+<body>
+<div class="page-container">
+	<div class="header">
+		<h1>Hardware y Software</h1>
+		<h2>Alta Modificacion</h2>
+	</div>
+	<div class="main-content">
+		<form method="post" action="" name="buscarE" class="formulario">
+			<fieldset>
+				<div id="CapaForm">
+				<p><label for="Catalogo" class="left">Equipo:</label>
+						<select name="Catalogo" id="Catalogo" class="combo">
+            		  	<option value="I18000094">Pc</option>
+                    <option value="I18000095">Servidor</option>
+                    <option value="I18000096">Mac</option>
+                    <option value="I18000097">Compaq</option>
+             </select>
+        </p>
+				<p><label for="NumInv" id="NumInv" class="left">Inventario:</label>
+						<input type="text" name="NumInv" id="NumInv" class="field" value="" size="12" maxlength="11"/>
+				</p>
+				<p><label for="anno" id="anoo" class="left">A&ntilde;o:</label>
+						<select name="Catalogo" id="Catalogo" class="combo">
+       				<option value="I18000094">90</option>
+              <option value="I18000095">91</option>
+              <option value="I18000096">.</option>
+              <option value="I18000097">.</option>
+							<option value="I18000096">.</option>
+              <option value="I18000097">06</option>
+							<option value="I18000096">07</option>
+       			</select>
+				</p>
+				</div>
+				<p><input type="button" name="submit" id="submit" class="button" value="Buscar" onclick="new slide('CapaForm')" onmouseover="cargaDoc('php/TablaAct.php','Tabla');" /></p>
+			</fieldset>
+		</form>
+		<div id="tabs">
+  	<ul>
+    	<li><a href="#" onclick="cargaDoc('php/TarjMad.php','Formularios','TM');" title="Tarjeta Madre"><span>Tarjeta Madre</span></a></li>
+    	<li><a href="#" onclick="cargaDoc('php/MemRam.php','Formularios','MR');" title="Memoria RAM"><span>Memoria RAM</span></a></li>
+    	<li><a href="#" onclick="cargaDoc('php/HDD.php','Formularios','HDD');" title="Disco Duro"><span>Disco Duro</span></a></li>
+    	<li><a href="#" onclick="cargaDoc('php/TarjRed.php','Formularios','TR');" title="Tarjeta de Red"><span>Tarjeta de Red</span></a></li>
+    	<li><a href="#" onclick="cargaDoc('php/Lectoras.php','Formularios','L');" title="Lectoras"><span>Lectoras</span></a></li>
+    	<li><a href="#" onclick="cargaDoc('php/TarjVid.php','Formularios','TV');" title="Tarjeta Video"><span>Tarjeta Video</span></a></li>
+			<li><a href="#" onclick="cargaDoc('php/Soft.php','Formularios','SW');" title="Software"><span>Software</span></a></li>
+  	</ul>
+		</div>
+	</div>
+	<div class="column-unit-left" id="Tabla">
+		
+	</div>
+	<!--Componetes ******************************************* -->
+	<div class="column-unit-right" id="Formularios">
+	<form method='get' action='' class='formulario' name='cantLe'>
+				<fieldset>
+				<legend>Lectoras</legend>
+					<p><label for='cantidad' class='left'>Cantidad</label>
+						<input type='text' maxlength='2' size='5' name='cantidad' id='cantidad'/>
+						<input type='button' name='bcantdTR' id='bcantdTR' value='>>'  class='button' onclick="cargaDoc('php/Lectoras.php','Formularios','cantLe');" />
+					</p>
+				</fieldset>
+			</form>
+	</div>
+	
+</div>
+</body>
+</html>

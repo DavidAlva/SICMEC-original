@@ -1,0 +1,31 @@
+<?php
+include_once('equipoComputo.class.php');
+$equipo = new EquipoComputo(
+function llenaTabla($datos){
+    $par = 1;
+    echo "<p align='center'><a>Seleccionar:</a> <a href='#'>Todo,</a> <a href='#'>ninguno</a></p>
+		<table id='test1' cellpadding='0' cellspacing='0' border='0' class=\"rowstyle-alt colstyle-alt no-arrow sortable-onload-1\">
+		<thead>
+      <tr>
+        <th></th>
+        <th class='sortable-text'>Nombre</th>
+        <th class='sortable-text'>Ubicaci&oacute;n</th>
+      </tr>
+    </thead><tbody>";
+    while($campo = mysql_fetch_row($result)){
+    	if ($par == 2){
+    		echo "<tr class='alt'>";
+    		$par = 1;
+    	}
+    	else{
+    		echo "<tr>";
+    		$par = 2;
+    	}
+    	echo "<td><input type='checkbox' id=\"" . $campo[0] . "\"/></td>
+        		<td>" . $campo[1] . "</td>
+        		<td>" . $campo[2] . "</td>
+      	</tr>";
+    }
+    echo "</tbody></table>";
+}
+?>

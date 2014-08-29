@@ -1,0 +1,47 @@
+<?php
+require_once('../../../Conexion/conexion.class.php');
+class EquipoComputo{
+	private $cveEquipo;
+	private $cveCatalogo;
+	private $numInventar;
+	private $annio;
+	private $result;
+	
+	function __construct($cvEqu,$cveCat,$numIn,$ann){
+		if ($cvEqu != "")
+			$this->cveEquipo = $cvEqu;
+		if ($cveCat != "")
+			$this->cveCatalogo = $cveCat;
+		if ($numIn != "")
+			$this->numInventar = $numIn;
+		if ($ann != "")
+			$this->annio = $ann;
+	}
+	
+	//Polimorfismo de acuerdo a la cantidad de datos enviados a la consulta
+	function consultaEquipo(){
+		$con = new MySqlConnection('sicmec','root','$4bi4n');
+		$con->Open();
+		if ($this->cveCatalogo != "Todos")
+			$where[] = " CveCatalogo = '" . $this->cveCatalogo . "' ";
+		if ($this->numInventar != "")
+			$where[] = " NumInv = " . $this->numInventar . " ";
+		if ($this->annio != "")
+			$where[] = " AnnoAlta = " . $this->annio . " ";
+		//Mezclar el array where y agregar la palabra and entre cada uno
+		foreach($where as $val){
+		//Concatenamos 2 variables es mas rapido {} que .
+			$strQ = "{$strQ}{$val}";
+			//agregamos la palabra and en caso de que sea mas de una busqueda
+			if(end($where) != $val)
+				$strQ = $strQ ." and ";
+		}
+		$query = "Select * from actfijo where " . $strQ;
+		$this->result = mysql_query($query,$con->getIdConnection()) or die(mysql_error());
+		$con->closeCon();
+		if(!$this->result)?return false; :	return $this->result;
+	}
+	
+
+}
+?>
